@@ -1,0 +1,10 @@
+<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
+    <description>
+    </description>
+    <body>
+        <section>
+	    <title>Chapter 4</title>
+            <p> Chapter text 4</p>
+        </section>
+    </body>
+</FictionBook>

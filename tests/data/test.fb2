@@ -1,0 +1,141 @@
+<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
+    <description>
+     <title-info>
+    <!--Вы можете указывать необходимое колличество жанров,
+     которым соответствует книга. Это облегчит ее каталогизацию в библиотеке.
+     Для занесения книги в библиотеку необходимо указать хотябы один жанр.-->
+      <genre>history_russia</genre>
+      <genre>romance_historical</genre>
+      <genre>literature_classics</genre>
+      <genre>literature_history</genre>
+      <genre>literature_war</genre>
+      <genre>literature_rus_classsic</genre>
+      <genre>computers</genre>
+      <author>
+    <!--Имя-Отчество-Фамилия автора книги. Так же
+     здесь допустимы поля nickname, home-page, email.
+     Необходимо указать first-name+last-name или nickname,
+     остальные поля являются необязательными.-->
+       <first-name>Лев</first-name>
+       <middle-name>Николаевич</middle-name>
+       <last-name>Толстой</last-name>
+       <nickname>Лева</nickname>
+       <home-page>lev@tolstoy.ru</home-page>
+       <email>http://www.pupkin.ru</email>
+      </author>
+    <!--Название книги - комментарии излишни.-->
+      <book-title>Война и мир</book-title>
+    <!--Аннотация - позволит разыскивающему себе чтива
+    в библиотеке оценить, подходит ему книга, или нет-->
+      <annotation>
+    <p>Это тестовый файл FictionBook 2.0. Создан грибовым дмитрием
+     в демонстрационных целях и для экспериментов с библиотекой FIctionBook.lib.
+     К сожалению сам роман я в FB2 пока не перевел.
+    </p>
+    <empty-line/>
+    <p>
+     Роман Толстого «Война и мир» был написан в 1869 году. Это
+     произведение явилось, по словам многих известных писателей и
+     критиков, «величайшим романом в мире». Главная мысль в романе -
+     мысль народная.
+    </p>
+    <!--Аннотация может включать в себя все текстовые элементы:
+     стихи
+     цитаты
+     пустые строки
+     гиперссылки.-->
+    <poem>
+    <title>
+     <p>Название стиха</p>
+    </title>
+    <epigraph>
+     <p>Стихотворение посвящается
+    тегу "stanza"</p>
+    </epigraph>
+    <stanza>
+     <v>Типа тут стихи</v>
+     <v>В этой строфе</v>
+     <v>Типа тут стихи</v>
+     <v>В этой строфе</v>
+    </stanza>
+    </poem>
+    <cite>
+    <p>Здесь можно кого-нибудь процитировать</p>
+    <text-author>Автор/Источник Цитаты</text-author>
+       </cite>
+       <p>
+    Большую часть романа занимают картины военных действий. В этом
+    произведении Толстым дано изображение двух войн: 1805 и 1812 годов. В обеих войнах
+    главным и решающим фактором явились
+    народные массы. <a xlink:href="#annotation_src" type="note">[источник]</a>.
+    </p>
+      </annotation>
+    <!--Уф. Вот и кончилась эта чудовищная аннотация,
+     дальше поехали ключевые слова, дата написания, обложка, язык книги и оригинала,
+     переводчик и серия.-->
+      <keywords>
+    1912, война, роман, отечественная, наполеон, кутузов, император, политика, нравственность
+      </keywords>
+      <date value="1869-01-01">1863-1869</date>
+      <coverpage>
+       <image xlink:href="#cover.jpg"/>
+      </coverpage>
+      <lang>ru</lang>
+      <src-lang>ru</src-lang>
+      <translator>
+       <first-name>Вообще-то</first-name>
+       <middle-name>никакого переводчика нет</middle-name>
+       <last-name>Это так, для примера</last-name>
+      </translator>
+    <!--Вообще-то этот роман не входит ни в какие серии,
+     но если вы он входил, выглядело бы это так:-->
+      <sequence name="Детство, Отрочество, Юность" number="2"/>
+     </title-info>
+
+
+    <!--Теперь поехала информация о документе,
+     когда отформатирован, кем и т.д.-->
+     <document-info>
+      <author>
+       <nickname>GribUser</nickname>
+       <home-page>http://www.gribuser.ru</home-page>
+       <email>grib@gribuser.ru</email>
+      </author>
+     <program-used>ClearTXT, XMLSpy, HomeSite 5.0</program-used>
+     <date value="2002-10-15">15 ноября 2002г., 19:53</date>
+     <src-url>http://www.magister.msk.ru/library/tolstoy/wp/wp00.htm</src-url>
+     <src-ocr>Oleg E. Kolesnikov</src-ocr>
+    <!--Поле id позволяет отслеживать судьбу документа,
+     и не вносить, например, в библиотеку, две версии одного документа,
+     а просто обновить его. Или наоборот, внести новый документ вместо
+     обновления существующего.-->
+     <id>GribUser_WarAndWorld_D49FHSH8l0HS5</id>
+     <version>2.0</version>
+     <history>
+      <p>Этот документ первоначально был создан для
+       FictionBook 1.0 и позднее переделан для FB2.0</p>
+      </history>
+     </document-info>
+
+    <!--И на закуску - информация о бумажной публикации,
+     на которой основан документ.-->
+     <publish-info>
+      <book-name>Л.Н.Толстой, Полное Собрание Сочинений</book-name>
+      <publisher>ГИХЛ</publisher>
+       <city>Москва</city>
+       <year>1957</year>
+       <isbn>Тут пишем ISBN код книги, если есть</isbn>
+     </publish-info>
+    <!--А здесь - все, что не лезет ни в какие рамки.-->
+     <custom-info info-type="general">
+    Здесь можно расположить дополнительную информацию, не укладывающуюся
+    в заданную схему. Это может быть как описательная информация, так и коммерческая
+    информация, связанная с книгой - например, информация о том, где можно купить бумажное издание
+     </custom-info>
+    </description>
+    <body>
+        <section>
+            <p> какой-то текст</p>
+        </section>
+    </body>
+</FictionBook>

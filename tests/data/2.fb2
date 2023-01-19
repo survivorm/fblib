@@ -1,0 +1,22 @@
+<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
+    <description>
+     <title-info>
+      <genre>history_russia</genre>
+      <genre>romance_historical</genre>
+      <author>
+       <first-name>Lev</first-name>
+       <last-name>Tolstoy</last-name>
+      </author>
+      <book-title>War and Peace</book-title>
+    </description>
+    <body>
+        <section>
+            <title>Chapter 2</title>
+            <p> Chapter text 2</p>
+        </section>
+        <section>
+            <title>Chapter 3</title>
+            <p> Chapter text 3</p>
+        </section>
+    </body>
+</FictionBook>
