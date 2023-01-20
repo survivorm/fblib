@@ -1,3 +1,9 @@
 nimcache/
 nimblecache/
 htmldocs/
+testresults/
+*.fb2
+tests/*
+!tests/**/*.nim
+!tests/**/*.cfg
+!tests/**/*.fb2
