@@ -8,10 +8,10 @@ srcDir      = "src"
 
 # Deps
 
-requires "nim >= 1.6.10"
+requires "nim > 1.6.10"
 
 task docgen, "Generate docs":
-    exec "nim doc ./src/fblib.nim"
+    exec "nim doc ./"
 
 task tests, "Make tests":
     exec "testament pattern \"./tests/*.nim\""
