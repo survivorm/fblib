@@ -11,7 +11,7 @@ srcDir      = "src"
 requires "nim > 1.6.10"
 
 task docgen, "Generate docs":
-    exec "nim doc ./"
+    exec "nim doc --project --index:on --git.url:https://github.com/survivorm/fblib --outdir:htmldocs ./src/fblib.nim"
 
 task tests, "Make tests":
     exec "testament pattern \"./tests/*.nim\""

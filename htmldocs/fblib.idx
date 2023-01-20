@@ -1,0 +1,63 @@
+nimTitle	fblib	fblib.html	module src/fblib		0
+nim	Author	fblib.html#Author	type Author		42
+nim	Translator	fblib.html#Translator	type Translator		56
+nim	TTitleInfo	fblib.html#TTitleInfo	type TTitleInfo		64
+nim	DocumentAuthor	fblib.html#DocumentAuthor	type DocumentAuthor		84
+nim	DDocumentInfo	fblib.html#DDocumentInfo	type DDocumentInfo		95
+nim	PPublishInfo	fblib.html#PPublishInfo	type PPublishInfo		116
+nim	Description	fblib.html#Description	type Description		132
+nim	tSection	fblib.html#tSection	CKind.tSection		147
+nim	tText	fblib.html#tText	CKind.tText		147
+nim	CKind	fblib.html#CKind	enum CKind		147
+nim	Image	fblib.html#Image	type Image		148
+nim	Section	fblib.html#Section	type Section		155
+nim	pAuto	fblib.html#pAuto	ParseFlags.pAuto		179
+nim	pPlain	fblib.html#pPlain	ParseFlags.pPlain		179
+nim	pSplit	fblib.html#pSplit	ParseFlags.pSplit		179
+nim	pNoParse	fblib.html#pNoParse	ParseFlags.pNoParse		179
+nim	ParseFlags	fblib.html#ParseFlags	enum ParseFlags		179
+nim	cStrip	fblib.html#cStrip	CleanFlags.cStrip		182
+nim	cNoSpec	fblib.html#cNoSpec	CleanFlags.cNoSpec		182
+nim	cSquashSymbols	fblib.html#cSquashSymbols	CleanFlags.cSquashSymbols		182
+nim	CleanFlags	fblib.html#CleanFlags	enum CleanFlags		182
+nim	Metadata	fblib.html#Metadata	type Metadata		185
+nim	Book	fblib.html#Book	type Book		203
+nim	newImage	fblib.html#newImage,string,string	proc newImage(name, data: string = ""): Image		263
+nim	newSection	fblib.html#newSection,CKind,string,Image,seq[string],string	proc newSection(kind: CKind; title: string = ""; image: Image = newImage();\n           epigraph: seq[string] = @[]; annotation: string = ""): Section		271
+nim	newSection	fblib.html#newSection,string,string,Image,seq[string],string,set[ParseFlags]	proc newSection(chapter: string; title: string = ""; image: Image = newImage();\n           epigraph: seq[string] = @[]; annotation: string = "";\n           flags: set[ParseFlags] = {}): Section		303
+nim	newSection	fblib.html#newSection,seq[Section],string,Image,seq[string],string	proc newSection(sections: seq[Section] = @[]; title: string = "";\n           image: Image = newImage(); epigraph: seq[string] = @[];\n           annotation: string = ""): Section		335
+nim	fromXml	fblib.html#fromXml,T,XmlNode,set[ParseFlags]	proc fromXml[T: ref object](obj: var T; xmlObject: XmlNode;\n                       flags: set[ParseFlags] = {}): T		427
+nim	toXml	fblib.html#toXml,T	proc toXml[T: ref object](obj: T): XmlNode		462
+nim	`$`	fblib.html#$,T	proc `$`[T: ref object](obj: T): string		522
+nim	save	fblib.html#save,Book,string	proc save(b: Book; file: string = ""): string		526
+nim	load	fblib.html#load,Book,string	proc load(b: var Book; file: string = ""): Book		536
+nim	getLastSection	fblib.html#getLastSection,Book	proc getLastSection(b: Book): Section		547
+nim	getLastSection	fblib.html#getLastSection,Section	proc getLastSection(s: Section): Section		552
+nim	newAuthor	fblib.html#newAuthor,string,string,string,string,string,string	proc newAuthor(firstName: string = ""; middleName: string = "";\n          lastName: string = ""; nickname: string = ""; homePage: string = "";\n          email: string = ""): Author		560
+nim	getAuthorName	fblib.html#getAuthorName,Book,set[CleanFlags]	proc getAuthorName(b: Book;\n              flags: set[CleanFlags] = {cStrip, cNoSpec, cSquashSymbols}): string		580
+nim	newTranslator	fblib.html#newTranslator,string,string,string	proc newTranslator(firstName: string = ""; middleName: string = "";\n              lastName: string = ""): Translator		641
+nim	newTTitleInfo	fblib.html#newTTitleInfo,seq[string],Author,string,string,seq[string],string,string,string,string,Translator	proc newTTitleInfo(genres: seq[string] = @[]; author: Author = newAuthor();\n              bookTitle: string = ""; annotation: string = "";\n              keywords: seq[string] = @[]; date: string = "";\n              coverpage: string = ""; lang: string = ""; srcLang: string = "";\n              translator: Translator = newTranslator()): TTitleInfo		653
+nim	newDocumentAuthor	fblib.html#newDocumentAuthor,string,string,string	proc newDocumentAuthor(firstName: string = ""; middleName: string = "";\n                  lastName: string = ""): DocumentAuthor		682
+nim	newDDocumentInfo	fblib.html#newDDocumentInfo,DocumentAuthor,string,string,string,string,string,string,string	proc newDDocumentInfo(author: DocumentAuthor = newDocumentAuthor();\n                 programUsed: string = ""; date: string = "";\n                 srcUrl: string = ""; srcOcr: string = ""; id: string = "";\n                 version: string = ""; history: string = ""): DDocumentInfo		696
+nim	newPPublishInfo	fblib.html#newPPublishInfo,string,string,string,int,string	proc newPPublishInfo(bookName: string = ""; publisher: string = "";\n                city: string = ""; year: int = 0; isbn: string = ""): PPublishInfo		722
+nim	newDescription	fblib.html#newDescription,TTitleInfo,DDocumentInfo,PPublishInfo	proc newDescription(titleInfo: TTitleInfo = newTTitleInfo();\n               documentInfo: DDocumentInfo = newDDocumentInfo();\n               publishInfo: PPublishInfo = newPPublishInfo()): Description		741
+nim	addSubSections	fblib.html#addSubSections,Section,openArray[Section]	proc addSubSections(parent: var Section; children: openArray[Section]): Section		755
+nim	newMetadata	fblib.html#newMetadata,set[ParseFlags],string,string	proc newMetadata(flags: set[ParseFlags] = {}; file: string = ""; fileTemplate: string = "{bookTitle}_{authorName}_1-{sectionsNum}.fb2"): Metadata		782
+nim	newMetadata	fblib.html#newMetadata,Book,set[ParseFlags],string,string	proc newMetadata(book: var Book; flags: set[ParseFlags] = {}; file: string = "";\n    fileTemplate: string = "{bookTitle}_{authorName}_1-{sectionsNum}.fb2"): Metadata		796
+nim	newBook	fblib.html#newBook,Description,seq[Section],Metadata	proc newBook(description: Description = newDescription(); body: seq[Section] = @[];\n        metadata: Metadata = newMetadata()): Book		809
+nim	fromXml	fblib.html#fromXml,XmlNode	proc fromXml(xmlBook: XmlNode): Book		830
+nim	addBookHeader	fblib.html#addBookHeader,Book,Description	proc addBookHeader(book: var Book; description: Description): Book		835
+nim	addChapter	fblib.html#addChapter,Book,Section	proc addChapter(book: var Book; chapter: Section): Book		839
+nim	addChapter	fblib.html#addChapter,Book,string,string,Image,seq[string],string,set[ParseFlags]	proc addChapter(book: var Book; chapter: string; title: string = "";\n           image: Image = newImage(); epigraph: seq[string] = @[];\n           annotation: string = ""; flags: set[ParseFlags] = {}): Book		844
+nim	appendFiles	fblib.html#appendFiles,Book,seq[string]	proc appendFiles(book: var Book; subbooks: seq[string]): Book		861
+nim	appendFiles	fblib.html#appendFiles,Book,string	proc appendFiles(book: var Book; directory: string): Book		876
+nim	merge	fblib.html#merge,seq[string]	proc merge(files: seq[string]): Book		890
+nim	merge	fblib.html#merge,string	proc merge(directory: string): Book		899
+nim	appendChapter	fblib.html#appendChapter,Section,string	proc appendChapter(chapter: var Section; text: string): Section		911
+nimgrp	addchapter	fblib.html#addChapter-procs-all	proc		839
+nimgrp	getlastsection	fblib.html#getLastSection-procs-all	proc		547
+nimgrp	newmetadata	fblib.html#newMetadata-procs-all	proc		782
+nimgrp	newsection	fblib.html#newSection-procs-all	proc		271
+nimgrp	fromxml	fblib.html#fromXml-procs-all	proc		427
+nimgrp	merge	fblib.html#merge-procs-all	proc		890
+nimgrp	appendfiles	fblib.html#appendFiles-procs-all	proc		861
