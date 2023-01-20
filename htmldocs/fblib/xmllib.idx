@@ -1,0 +1,3 @@
+nimTitle	xmllib	fblib/xmllib.html	module src/fblib/xmllib		0
+nim	restrictTags	fblib/xmllib.html#restrictTags,XmlNode,openArray[string],openArray[string],openArray[string],openArray[string]	proc restrictTags(n: var XmlNode;\n             prohibit, allow, mapFrom, mapTo: openArray[string] = @[]): var XmlNode		8
+nim	innerHtml	fblib/xmllib.html#innerHtml,XmlNode	proc innerHtml(n: XmlNode): string		74
