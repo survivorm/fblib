@@ -14,6 +14,7 @@ proc restrictTags*(n: var XmlNode, prohibit, allow, mapFrom, mapTo: openArray[st
   ## `mapTo`.
   ## n should be xnElement type
   runnableExamples:
+    import xmltree
     var g = newElement("myTag")
     var k = newElement("body")
     var l = newElement("div")
