@@ -30,13 +30,13 @@ runnableExamples:
     discard b.save()
 ## See also:
 ## * `appendFiles proc <#appendFiles,Book,seq[string]>`_ to add chapters from
-## *subbooks* to *book*
+##   *subbooks* to *book*
 ## * `appendFiles proc <#appendFiles,Book,string>`_ to add chapters from all fb2
-## files in *directory* to *book*
+##   files in *directory* to *book*
 ## * `merge proc <#merge,seq[string]>`_ to merge chapters from all *files*,
-## using sequence order of files
+##   using sequence order of files
 ## * `merge proc <#merge,string>`_ to merge chapters from all fb2 files in *directory*.
-## Files are merged alphabetically, description is taken fro first file
+##   Files are merged alphabetically, description is taken fro first file
 
 type
     Author* = ref object
